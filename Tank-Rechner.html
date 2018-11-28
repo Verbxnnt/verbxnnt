@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<meta charset="utf-8" />
+<title>Dein-Schlauer-Tank-Rechner</title>
+<meta name="generator" content="Verbxnnt 1.01" />
+<h1>Tank-Rechner</h1>
+<style>
+  
+	html {background-color: #43E622;
+	font-size: 3.5em;
+	text-align: center;
+	font-weight: bold;
+	line-hight: 1em;
+	font-family: Comic sans MS;
+}
+img {padding-left: 0.0em;
+	 
+     margin-top: 0.0em;
+	 margin-bottom: 1.5em;
+	 width: 6.6em;
+  }	  
+	
+		
+		
+		
+		
+		
+	
+
+a:hover{
+	color: #03FD00;
+	
+}
+
+a{
+	text decoration: none;
+	background: linear-gradient(#FFFFFF, #EE960D);
+	border: groove yellow 10px;
+}
+</style>
+
+</head>
+
+
+<body>
+<img src="fordi.jpg"/>
+<script>"use strict";
+	
+	
+function rechner() {
+let kilometer = document.getElementById("kilometer").value;
+let liter = document.getElementById("liter").value;
+let tankgroesse = document.getElementById("menge").value;
+let verbrauch = (liter / kilometer * 100).toFixed(2);
+let reichweite = Math.round(tankgroesse * kilometer / liter);
+
+document.getElementById("Ergebnis").innerHTML = ("Dein Auto verbraucht " + verbrauch + " Liter auf 100 km. Mit einer Tankfüllung kommst du " + reichweite + " km weit.");
+
+if(verbrauch >10) {document.getElementById("spar").innerHTML = ("Dein Auto verbraucht zu viel Sprit!");
+} else {
+document.getElementById("spar").innerHTML = ("Sehr gut, du hast ein sparsammes Auto!");
+}
+}
+</script>
+
+<form id="form1">
+
+<fieldset>
+<img src="keg.jpg"/>
+<p>Wie viel Kilometer bist du gefahren?</p>
+<input type="text" name="kilometer" id="kilometer"/>
+<br>
+<p>Wie viel Liter hast du getankt?</p>
+<input type="text" name="liter" id="liter"/>
+<br>
+<p>Wie viel Liter passen in deinen Tank?</p>
+<input type="text" name="menge" id="menge"/>
+<br>
+<br>
+<input type="button" onClick="rechner()" value="Rechnen"/>
+<br>
+<br>
+<fieldset>
+<p id="Ergebnis" style="color: black"></p>
+<p id="spar"></p>
+<p style="color:#26FCEC; font-size: 30px;">Auf Wiedersehen!</p>
+
+<input type="reset" form="form1" value="Nochmal Rechnen"/>
+
+</script>  
+<br>
+<br>
+
+
+
+</a>
+
+</body>
+
+
+
+
+</html>
+<a href="https://instagram.com/lukxs_13 "title = "Mein Instagram Account" >   Instagram  
